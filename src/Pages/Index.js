@@ -1,8 +1,9 @@
-function Index({transactions}) {
+import Transactions from "../Components/Transactions";
+function Index({ transactions, total }) {
     return(
         <div className="index">
-            <h2>Index </h2>
-            <transactions/>
+            {console.log(total)}
+            <Transactions transactions={transactions} total={total}/>
            
         </div>
     )
