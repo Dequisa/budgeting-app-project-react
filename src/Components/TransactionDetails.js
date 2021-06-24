@@ -20,7 +20,7 @@ function TransactionDetails() {
             } catch (err) { console.log(err) }
         }
         fetch();
-    }, [])
+    }, [index, History])
 
     return (<div>
         <h4>Date: {transactions.date}</h4>

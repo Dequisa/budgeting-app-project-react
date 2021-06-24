@@ -10,7 +10,7 @@ function Show({ transactions, total}) {
         <h2>Details</h2>
         <section>
             <TransactionDetails 
-            transactions={transactions} index={index} total={total}
+            transactions={transactions} transaction={transaction}index={index} total={total}
             />
         </section>
 
