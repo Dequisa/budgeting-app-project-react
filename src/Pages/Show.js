@@ -3,9 +3,8 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 
 function Show({ transactions, total}) {
-    console.log("Im logged")
     let { index } = useParams();
-    const [] = useState(transactions[index]);
+    const [transaction] = useState(transactions[index]);
     return(
     <div className="Show">
         <h2>Details</h2>

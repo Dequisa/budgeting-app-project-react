@@ -18,13 +18,16 @@ const API = apiURL();
 function App() {
   const [transactions, setTransactions] = useState([]);
   
-  useEffect(async () => {
+  useEffect(() => {
+    async function fetch(){
     try {
-      const res = await axios.get(`${API}/transactions`);
+      const res =  await axios.get(`${API}/transactions`);
       setTransactions(res.data)
     } catch (err) {
       console.log(err)
     }
+  }
+  fetch();
   }, []);
 
  const addTransaction = async (newTransaction)=>{
